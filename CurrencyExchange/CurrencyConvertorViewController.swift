@@ -18,8 +18,6 @@ class CurrencyConvertorViewController: UIViewController, UITableViewDelegate, UI
             self.tableView.reloadData()
         }
     }
-    
-    var urlString = "http://api.evp.lt/currency/commercial/exchange/%7BfromAmount%7D-%7BfromCurrency%7D/%7BtoCurrency%7D/latest"
 
     var activeCurrency = 0.0
     
@@ -30,7 +28,6 @@ class CurrencyConvertorViewController: UIViewController, UITableViewDelegate, UI
         appendToCurrencies()
         updateUI()
         cellRegister()
-        fetchJSON()
     }
     
     @objc func updateViews(input: Double) {
@@ -136,25 +133,7 @@ class CurrencyConvertorViewController: UIViewController, UITableViewDelegate, UI
         return 60
     }
     
-    func fetchJSON() {
-        guard let url = URL(string: urlString) else { return }
-        let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
-            if  error != nil {
-                print(error)
-                return
-            }
-            guard let safeData = data else { return }
-            
-            do {
-                let results = try JSONDecoder().decode(Currency.self, from: safeData)
-                print(results.amount)
-            }
-            catch {
-                print(error)
-            }
-        }
-        task.resume()
-    }
+    
     
     @IBAction func tapTpSubmitButton() {
         /*
