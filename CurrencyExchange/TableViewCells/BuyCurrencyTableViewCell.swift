@@ -37,6 +37,7 @@ class BuyCurrencyTableViewCell: UITableViewCell, UITextFieldDelegate {
         toolBar.sizeToFit()
         textFiled.inputAccessoryView = toolBar
     }
+    
     @objc private func didTapDone() {
         textFiled.resignFirstResponder()
         fetchJSON()
@@ -100,5 +101,4 @@ class BuyCurrencyTableViewCell: UITableViewCell, UITextFieldDelegate {
     @IBAction func textFiledEditingChanged(_ sender: UITextField) {
         print(textFiled.text)
     }
-    
 }

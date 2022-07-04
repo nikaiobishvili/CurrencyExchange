@@ -30,10 +30,6 @@ class CurrencyConvertorViewController: UIViewController, UITableViewDelegate, UI
         cellRegister()
     }
     
-    @objc func updateViews(input: Double) {
-        
-    }
-    
     func updateUI() {
         submitButton.layer.cornerRadius = 25
         tableView.separatorStyle = .none
@@ -132,8 +128,6 @@ class CurrencyConvertorViewController: UIViewController, UITableViewDelegate, UI
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
-    
-    
     
     @IBAction func tapTpSubmitButton() {
         /*
