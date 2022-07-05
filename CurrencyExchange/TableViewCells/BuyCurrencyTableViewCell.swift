@@ -50,7 +50,6 @@ class BuyCurrencyTableViewCell: UITableViewCell, UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if let digit = Int(string) {
             amt = amt * 10 + digit
-            
             if amt > 1_000_000_000 {
                 textField.text = ""
                 amt = 0
@@ -96,7 +95,6 @@ class BuyCurrencyTableViewCell: UITableViewCell, UITextFieldDelegate {
     @IBAction func tapToCurrencyChooser() {
         self.buttonTouchedClosure?()
     }
-    
     
     @IBAction func textFiledEditingChanged(_ sender: UITextField) {
         print(textFiled.text)

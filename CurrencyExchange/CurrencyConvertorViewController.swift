@@ -129,7 +129,7 @@ class CurrencyConvertorViewController: UIViewController, UITableViewDelegate, UI
         return 60
     }
     
-    @IBAction func tapTpSubmitButton() {
+    @IBAction func tapToSubmitButton() {
         /*
          if Sell(გასაყიდი)-ის ველიუ < არსებულ ვალუტის ემაუნთზე && ტრანზაქცია > 5 {
             არსებულ ვალუტის ემაუნთს - Sell(გასაყიდი) -ის ემაუნთი
