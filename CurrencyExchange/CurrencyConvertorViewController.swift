@@ -135,7 +135,7 @@ class CurrencyConvertorViewController: UIViewController, UITableViewDelegate, UI
             არსებულ ვალუტის ემაუნთს - Sell(გასაყიდი) -ის ემაუნთი
             Receiver-ის ვალუტის ემაუნთს + არსებულ შესაბამის ვალუტის ემაუნთს
             let alert = UIAlertController(title: "Currency converted",
-                                       message: "You have converted \("nika") \("nika") to \("nika") \("nika"). Commision Fee - \("nika") \("nika")",
+                                       message: "You have converted \("amountFrom") \("currencyFrom") to \("amountTo") \("currencyTo"). Commision Fee - \("comissionAmount") \("currencyFrom")",
                                        preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "DONE",
                                        style: .default,
@@ -147,7 +147,7 @@ class CurrencyConvertorViewController: UIViewController, UITableViewDelegate, UI
             არსებულ ვალუტის ემაუნთს - Sell(გასაყიდი) -ის ემაუნთი
             Receiver-ის ვალუტის ემაუნთს + არსებულ შესაბამის ვალუტის ემაუნთს
             let alert = UIAlertController(title: "Currency converted",
-                                    message: "You have converted \("nika") \("nika") to \("nika") \("nika"). Commision Fee - 0 \("CURRENCY")",
+                                    message: "You have converted \("amountFrom") \("currencyFrom") to \("amountTo") \("currencyTo"). Commision Fee - 0 \("currencyFroma")",
                                     preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "DONE",
                                     style: .default,
