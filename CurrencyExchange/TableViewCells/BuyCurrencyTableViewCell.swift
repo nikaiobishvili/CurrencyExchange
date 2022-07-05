@@ -20,8 +20,6 @@ class BuyCurrencyTableViewCell: UITableViewCell, UITextFieldDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         setTextFiled()
-        textFiled.resignFirstResponder()
-        textFiled.becomeFirstResponder()
     }
     
     func setTextFiled() {

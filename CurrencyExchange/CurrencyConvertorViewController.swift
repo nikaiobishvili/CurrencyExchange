@@ -101,7 +101,7 @@ class CurrencyConvertorViewController: UIViewController, UITableViewDelegate, UI
                 selectedCurrencyFrom?.currency != selectedCurrencyto?.currency {
                 cell.currencyType.text = selectedCurrencyFrom?.currency
             } else {
-                cell.currencyType.text = "EUR"
+                cell.currencyType.text = ""
             }
             return cell
         } else if indexPath.row == 4 {
@@ -115,7 +115,7 @@ class CurrencyConvertorViewController: UIViewController, UITableViewDelegate, UI
             if selectedCurrencyto?.currency != nil {
                 cell.currencyType.text = selectedCurrencyto?.currency
             } else {
-                cell.currencyType.text = "EUR"
+                cell.currencyType.text = ""
             }
             return cell
         }
@@ -129,6 +129,7 @@ class CurrencyConvertorViewController: UIViewController, UITableViewDelegate, UI
         return 60
     }
     
+    //MARK: - Submit button
     @IBAction func tapToSubmitButton() {
         /*
          if Sell(გასაყიდი)-ის ველიუ < არსებულ ვალუტის ემაუნთზე && ტრანზაქციის რაოდენობა > 5 {
