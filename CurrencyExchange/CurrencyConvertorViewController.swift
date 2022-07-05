@@ -131,7 +131,7 @@ class CurrencyConvertorViewController: UIViewController, UITableViewDelegate, UI
     
     @IBAction func tapToSubmitButton() {
         /*
-         if Sell(გასაყიდი)-ის ველიუ < არსებულ ვალუტის ემაუნთზე && ტრანზაქცია > 5 {
+         if Sell(გასაყიდი)-ის ველიუ < არსებულ ვალუტის ემაუნთზე && ტრანზაქციის რაოდენობა > 5 {
             არსებულ ვალუტის ემაუნთს - Sell(გასაყიდი) -ის ემაუნთი
             Receiver-ის ვალუტის ემაუნთს + არსებულ შესაბამის ვალუტის ემაუნთს
             let alert = UIAlertController(title: "Currency converted",
