@@ -20,6 +20,7 @@ class CurrencyConvertorViewController: UIViewController, UITableViewDelegate, UI
     }
 
     var activeCurrency = 0.0
+    var urlString = "http://api.evp.lt/currency/commercial/exchange/%7BfromAmount%7D-%7BfromCurrency%7D/%7BtoCurrency%7D/latest"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +62,26 @@ class CurrencyConvertorViewController: UIViewController, UITableViewDelegate, UI
         }
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         self.present(actionSheet, animated: true, completion: nil)
+    }
+    
+    func fetchJSON() {
+        guard let url = URL(string: urlString) else { return }
+        let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+            if  error != nil {
+                print(error)
+                return
+            }
+            guard let safeData = data else { return }
+            
+            do {
+                let results = try JSONDecoder().decode(Currency.self, from: safeData)
+                print(results.amount)
+            }
+            catch {
+                print(error)
+            }
+        }
+        task.resume()
     }
     
     func createSheetForTo() {
